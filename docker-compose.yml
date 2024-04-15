@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend1:
+    build:
+      context: ./frontend1
+    ports:
+      - "3001:80"
+
+  frontend2:
+    build:
+      context: ./frontend2
+    ports:
+      - "3002:80"
+
+  server:
+    build:
+      context: ./server
+    ports:
+      - "8000:8000"
